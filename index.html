@@ -5,17 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title> </title>
-
-
+    <title> Evaluación intermedia | Módulo 2 </title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
+<body class="body">
+
+    <h1 class="guess"> Adivina el número </h1>
+
+    <main class="main">
+
+        <p class="introduce">Introduce aquí el número:</p>
+        
+        <form class="form">
+            <input
+                class="number js__number"
+                type="text"
+                id="number"
+                name="number"
+                placeholder=""
+                required
+            />
+         <input class="button js__button count_click" type="button" value="Prueba">
+         <p> </p>
+         <input
+                class="pista js__pista"
+                type="text"
+                id="pista"
+                name="pista"
+                placeholder="Pista: Escribe el número y dale a prueba"
+                required
+            />
+            <input
+                class="intentos js__intentos"
+                type="intentos"
+                id="intentos"
+                name="intentos"
+                placeholder="Número de intentos: 0 "
+                required
+            />
+        </form>
+    </main>
 
 
-
-    <script> chill</script>
-
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
