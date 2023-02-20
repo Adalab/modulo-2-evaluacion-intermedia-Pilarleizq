@@ -14,36 +14,22 @@
     <h1 class="guess"> Adivina el número </h1>
 
     <main class="main">
-
-        <p class="introduce">Introduce aquí el número:</p>
         
         <form class="form">
+            <label for="number" class="label"> Introduce aquí tu número:</label>
             <input
                 class="number js__number"
-                type="text"
+                type="number"
                 id="number"
                 name="number"
-                placeholder=""
+                placeholder="Escribe un número"
                 required
             />
          <input class="button js__button count_click" type="button" value="Prueba">
-         <p> </p>
-         <input
-                class="clue js__clue"
-                type="text"
-                id="clue"
-                name="clue"
-                placeholder="clue: Escribe el número y dale a prueba"
-                required
-            />
-            <input
-                class="attempts js__attempts"
-                type="attempts"
-                id="attempts"
-                name="attempts"
-                placeholder="Número de intentos: 0 "
-                required
-            />
+         
+         <p class="clue js__clue"> Escribe el número y dale a prueba </p>
+         <p class="attempts js__attempts"> Número de intentos: 0 </p>
+   
         </form>
     </main>
 

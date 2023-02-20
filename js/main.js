@@ -18,39 +18,37 @@ function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
     }
 
+function writeHTML(text){
+    clue.innerHTML = text;
+}
+
 function compareNumber(){
-    const numberWrite = number.value;
+    const numberWrite = parseInt(number.value);
 
-if (numberWrite < 1 || numberWrite > 100) {
-    return ('El número debe estar entre 1 y 100')
+if (number.value.length === 0){
+    console.log('hola');
+    writeHTML('Escríbe un número')
+} else if (numberWrite < 1 || numberWrite > 100) {
+    writeHTML('El número debe estar entre 1 y 100')
 } else if (numberWrite < numberRandom){
-    return ('Demasiado bajo.')
+    writeHTML('Demasiado bajo.')
 } else if (numberWrite > numberRandom){
-    return  ('Demasiado alto.')
+    writeHTML('Demasiado alto.')
 } else if (numberWrite === numberRandom){
-    return ('Has ganado campeona!!!!')
-} else {
-    return ('El número debe estar entre 0 y 100')
-}
+    writeHTML('Has ganado campeona!!!!')
+} 
 
 }
 
-function clickButton(event) {
-    clue.value = compareNumber();
-}
-
-// No sé como hacer para que sea una función que forme parte del addEventListener
-button.onclick = function () {
+function counterButton () {
     counter++;
-    document.getElementById("attempts").value = `Número de intentos: ${counter}`
-
+    attempts.innerHTML = `Número de intentos: ${counter}`
 }
 
 function handleClickButton (event){
     event.preventDefault();
-    clickButton();
-    clue.value = compareNumber ();
-
+    clue.value = compareNumber();
+    counterButton();
 }
 
 // Eventos 

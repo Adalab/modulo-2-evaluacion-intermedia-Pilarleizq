@@ -38,6 +38,10 @@
     flex-direction: column;
 }
 
+.label {
+    padding: 10px;
+}
+
 .introduce {
     color:rgb(97, 97, 97);
     padding: 10px;
